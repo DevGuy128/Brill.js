@@ -154,7 +154,15 @@ window.brill = (function() {
             };
         }
     }());
-    var getter = {
+    brill.prototype.route = function(type,endpoint,callback){
+      if(type === '/GET' || '/POST' || '/DELETE'){
+          console.log("Making " + type + " request to " + endpoint + ".");
+      }else{
+          console.log(type + "is not a valid request.");
+      }
+    
+    };
+    var briller = {
         get: function(selector) {
             var els;
             if (typeof selector === "string") {
