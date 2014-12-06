@@ -13,4 +13,4 @@ You can put anything you want in that array. It will just get returned.
 
 In v1, there is a number of functions. To use the map function, simply write <code>app.map(callback);</code> You really should look in the library.
 
-If you have any ideas or improvements, please comment.
+If you have any ideas or improvements, please comment or make a pull request.
