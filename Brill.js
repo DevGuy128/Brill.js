@@ -154,14 +154,16 @@ window.brill = (function() {
             };
         }
     }());
-    brill.prototype.route = function(type,endpoint,callback){
-      if(type === '/GET' || '/POST' || '/DELETE'){
-          console.log("Making " + type + " request to " + endpoint + ".");
-      }else{
-          console.log(type + "is not a valid request.");
-      }
+    brill.prototype.get = function(endpoint,callback){
     
     };
+    brill.prototype.post = function(endpoint,callback){
+    
+    };
+    brill.prototype.delete = function(endpoint,callback){
+    
+    };
+    
     var briller = {
         get: function(selector) {
             var els;
