@@ -164,6 +164,19 @@ window.brill = (function() {
       callback.call();
     };
     brill.prototype.post = function(endpoint,callback){
+      var url = "sample-url.php";
+      
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+
+//Send the proper header information along with the request
+     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+     xhr.send(params);
+
+//Send the proper header information along with the request
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
     
     };
     brill.prototype.delete = function(endpoint,callback){
