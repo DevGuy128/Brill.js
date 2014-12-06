@@ -161,6 +161,7 @@ window.brill = (function() {
       xmlHttp.open( "GET", endpoint, false );
       xmlHttp.send( null );
       return xmlHttp.responseText;
+      callback.call();
     };
     brill.prototype.post = function(endpoint,callback){
     
