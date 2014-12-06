@@ -155,7 +155,12 @@ window.brill = (function() {
         }
     }());
     brill.prototype.get = function(endpoint,callback){
-    
+      var xmlHttp = null;
+
+      xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", endpoint, false );
+      xmlHttp.send( null );
+      return xmlHttp.responseText;
     };
     brill.prototype.post = function(endpoint,callback){
     
