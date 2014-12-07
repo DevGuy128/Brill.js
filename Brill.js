@@ -12,10 +12,12 @@ window.brill = (function() {
             results.push(callback.call(this, this[i], i));
         }
         return results;
+        this.map = true;
     };
     brill.prototype.forEach = function(callback) {
         this.map(callback);
         return this;
+        this.forEach = true;
     };
     brill.prototype.mapOne = function(callback) {
         var m = this.map(callback);
