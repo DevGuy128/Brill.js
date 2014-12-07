@@ -183,7 +183,15 @@ window.brill = (function() {
       return xmlHttp.responseText;
       callback.call();
     };
-    
+    brill.prototype.put = function(endpoint,callback){
+      var xmlHttp = null;
+
+      xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "PUT", endpoint, false );
+      xmlHttp.send( null );
+      return xmlHttp.responseText;
+      callback.call();
+    };
     var briller = {
         get: function(selector) {
             var els;
