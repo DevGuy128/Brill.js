@@ -193,7 +193,7 @@ window.brill = (function() {
 
  var write = function(text,place){
      (function(){
-       var place = getElementById(place);
-       place.write(text);
+       var where = getElementById(place);
+       where.write(text);
      })();
- }
+ };
