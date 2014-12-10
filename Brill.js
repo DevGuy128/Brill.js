@@ -191,6 +191,9 @@ window.brill = (function() {
     return brill;
 }());
 
- var write = function(text){
-     document.write(text);
+ var write = function(text,place){
+     (function(){
+       var place = getElementById(place);
+       place.write(text);
+     })();
  }
