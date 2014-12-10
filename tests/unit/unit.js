@@ -1,4 +1,5 @@
 //Tests go here
+require("../test.js")
 try{
   var app = require("app.js");
   if(app !== undefined || null){
