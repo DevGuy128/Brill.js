@@ -1,6 +1,6 @@
 try{
   var app = require("app.js");
-  if(app !== undefined || null){
+  if(app == undefined || null){
     throw "App is empty".
   }
   
