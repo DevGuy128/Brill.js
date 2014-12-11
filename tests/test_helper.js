@@ -7,4 +7,11 @@ var Test = function(){
       console.log(message);
     }
   }
-}
+  this.assert_not_null  = function(content){
+    if(content !== null){
+      console.log("Test passed");
+    }else{
+      console.log("Test failed");
+    }
+  }
+};
