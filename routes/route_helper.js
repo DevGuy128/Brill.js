@@ -1,4 +1,4 @@
- brill.prototype.get = function(endpoint,callback){
+get = function(endpoint,callback){
       var xmlHttp = null;
 
       xmlHttp = new XMLHttpRequest();
@@ -7,7 +7,7 @@
       return xmlHttp.responseText;
       callback.call();
 };
-brill.prototype.post = function(endpoint,callback){
+post = function(endpoint,callback){
   var xmlHttp = null;
 
   xmlHttp = new XMLHttpRequest();
@@ -16,7 +16,7 @@ brill.prototype.post = function(endpoint,callback){
   return xmlHttp.responseText;
   callback.call();
 };
-brill.prototype.delete = function(endpoint,callback){
+delete = function(endpoint,callback){
   var xmlHttp = null;
 
   xmlHttp = new XMLHttpRequest();
@@ -25,7 +25,7 @@ brill.prototype.delete = function(endpoint,callback){
   return xmlHttp.responseText;
   callback.call();
   };
-brill.prototype.put = function(endpoint,callback){
+put = function(endpoint,callback){
       var xmlHttp = null;
 
       xmlHttp = new XMLHttpRequest();
