@@ -1,6 +1,6 @@
 if (typeof Array.prototype.indexOf !== "function") {
-    Array.prototype.indexOf = function (item) {
-        for(var i = 0; i < this.length; i++) {
+    Array.prototype.indexOf = function(item) {
+        for (var i = 0; i < this.length; i++) {
             if (this[i] === item) {
                 return i;
             }
@@ -164,7 +164,7 @@ window.brill = (function() {
             };
         }
     }());
-    
+
     var DOM = {
         getElement: function(selector) {
             var els;
@@ -201,100 +201,100 @@ window.brill = (function() {
     return brill;
 }());
 
-var write = function(text){
-     document.write(text);
+var write = function(text) {
+    document.write(text);
 };
-var Test = function(){
-  this.assert = function(expression,message){
-    if(expression){
-      console.log("Test passed.");
-    }else{
-      console.log("Test failed./n");
-      console.log(message);
-    }
-  };
-  this.assert_not_null  = function(content,meassge){
-    if(content !== null){
-      console.log("Test passed");
-    }else{
-      console.log("Test failed");
-      console.log(message);
-    }
-  };
- 
+var Test = function() {
+    this.assert = function(expression, message) {
+        if (expression) {
+            console.log("Test passed.");
+        } else {
+            console.log("Test failed./n");
+            console.log(message);
+        }
+    };
+    this.assert_not_null = function(content, meassge) {
+        if (content !== null) {
+            console.log("Test passed");
+        } else {
+            console.log("Test failed");
+            console.log(message);
+        }
+    };
+
 };
-var JBrillTest = function(){
-  this.describe = function(example,description){
-    
-  };
-  this.it = function(example,description){
-    console.log(example + description);
-  };
-  this.should$$ = function(actual){
-    if(this === actual){
-      return true;
-    }else{
-      return false;
-    }
-    
-  };
+var JBrillTest = function() {
+    this.describe = function(example, description) {
+
+    };
+    this.it = function(example, description) {
+        console.log(example + description);
+    };
+    this.should$$ = function(actual) {
+        if (this === actual) {
+            return true;
+        } else {
+            return false;
+        }
+
+    };
 
 };
 
 
-var performance = Object.create(instance)
-performance.time = function(code){
-  var start = !new Date();
-  code.call()
-  var totalTime = !new Date() - start;
-  console.log("Your code took " + totalTime + " milliseconds");
-}
-var get = function(endpoint,callback){
-      var xmlHttp = null;
-
-      xmlHttp = new XMLHttpRequest();
-      xmlHttp.open( "GET", endpoint, false );
-      xmlHttp.send( null );
-      return xmlHttp.responseText;
-      callback.call();
+var performance = Object.create(instance);
+performance.time = function(code) {
+    var start = !new Date();
+    code.call();
+    var totalTime = !new Date() - start;
+    console.log("Your code took " + totalTime + " milliseconds");
 };
-var post = function(endpoint,callback){
-  var xmlHttp = null;
+var get = function(endpoint, callback) {
+    var xmlHttp = null;
 
-  xmlHttp = new XMLHttpRequest();
-  xmlHttp.open( "POST", endpoint, false );
-  xmlHttp.send( null );
-  return xmlHttp.responseText;
-  callback.call();
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", endpoint, false);
+    xmlHttp.send(null);
+    return xmlHttp.responseText;
+    callback.call();
 };
-var delete = function(endpoint,callback){
-  var xmlHttp = null;
+var post = function(endpoint, callback) {
+    var xmlHttp = null;
 
-  xmlHttp = new XMLHttpRequest();
-  xmlHttp.open( "DELETE", endpoint, false );
-  xmlHttp.send( null );
-  return xmlHttp.responseText;
-  callback.call();
-  };
-var put = function(endpoint,callback){
-      var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("POST", endpoint, false);
+    xmlHttp.send(null);
+    return xmlHttp.responseText;
+    callback.call();
+};
+var deleterequest = function(endpoint, callback) {
+    var xmlHttp = null;
 
-      xmlHttp = new XMLHttpRequest();
-      xmlHttp.open( "PUT", endpoint, false );
-      xmlHttp.send( null );
-      return xmlHttp.responseText;
-      callback.call();
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("DELETE", endpoint, false);
+    xmlHttp.send(null);
+    return xmlHttp.responseText;
+    callback.call();
 };
-var Model = function(validations){
-  this.validatePresencceOf = function(validated){
-    if(validated === null || undefined){
-      throw validated + " is not defined.";
-    }
-  };
+var put = function(endpoint, callback) {
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("PUT", endpoint, false);
+    xmlHttp.send(null);
+    return xmlHttp.responseText;
+    callback.call();
 };
-var Controller = function(model,view){
-  this.model = model;
-  require(model);
-  this.view = view;
-  require(view);
-}
+var Model = function(validations) {
+    this.validatePresencceOf = function(validated) {
+        if (validated === null || undefined) {
+            throw validated + " is not defined.";
+        }
+    };
+};
+var Controller = function(model, view) {
+    this.model = model;
+    require(model);
+    this.view = view;
+    require(view);
+};
