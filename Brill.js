@@ -230,17 +230,8 @@ var JBrillTest = function(){
   };
 
 };
-try{
-  var app = require("app.js");
-  if(app !== undefined || null){
-    throw "App is empty".
-  }
-  
-}catch(error){
-  console.log("Error: " + error.message + ".");
-}
-var tester = require('../test.js');
-var instance = new Test();
+
+
 var performance = Object.create(instance)
 performance.time = function(code){
   var start = !new Date();
