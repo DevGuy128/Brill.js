@@ -155,8 +155,8 @@ window.brill = (function() {
         }
     }());
     
-    var briller = {
-        get: function(selector) {
+    var DOM = {
+        getElement: function(selector) {
             var els;
             if (typeof selector === "string") {
                 els = document.querySelectorAll(selector);
@@ -167,7 +167,7 @@ window.brill = (function() {
             }
             return new brill(els);
         },
-        create: function(tagName, attrs) {
+        createElement: function(tagName, attrs) {
             var el = new brill([document.createElement(tagName)]);
             if (attrs) {
                 if (attrs.className) {
