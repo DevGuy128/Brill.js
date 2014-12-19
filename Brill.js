@@ -1,3 +1,13 @@
+if (typeof Array.prototype.indexOf !== "function") {
+    Array.prototype.indexOf = function (item) {
+        for(var i = 0; i < this.length; i++) {
+            if (this[i] === item) {
+                return i;
+            }
+        }
+        return -1;
+    };
+}
 window.brill = (function() {
     function brill(els) {
         for (var i = 0; i < els.length; i++) {
