@@ -1,3 +1,4 @@
+/* Write JavaScript here */
 if (typeof Array.prototype.indexOf !== "function") {
     Array.prototype.indexOf = function(item) {
         for (var i = 0; i < this.length; i++) {
@@ -242,7 +243,7 @@ var JBrillTest = function() {
 
 
 var performance = {
-    time
+  
 };
 performance.time = function(code) {
     var start = !new Date();
