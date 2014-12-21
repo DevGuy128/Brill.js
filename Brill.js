@@ -200,7 +200,6 @@ window.brill = (function() {
 
     return brill;
 }());
-
 var write = function(text) {
     document.write(text);
 };
