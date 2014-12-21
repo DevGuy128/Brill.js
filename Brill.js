@@ -241,7 +241,9 @@ var JBrillTest = function() {
 };
 
 
-var performance = Object.create(instance);
+var performance = {
+    time
+};
 performance.time = function(code) {
     var start = !new Date();
     code.call();
