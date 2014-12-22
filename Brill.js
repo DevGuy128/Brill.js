@@ -204,6 +204,9 @@ window.brill = (function() {
 var write = function(text) {
     document.write(text);
 };
+var random = function(num1,num2){
+    Math.floor((Math.random()*num2)+num1);
+};
 var Test = function() {
     this.assert = function(expression, message) {
         if (expression) {
