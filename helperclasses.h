@@ -1,2 +1,2 @@
-@interface
+@interface brill
 @end
