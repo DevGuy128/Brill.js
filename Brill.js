@@ -264,12 +264,14 @@ var get = function(endpoint, callback) {
     callback.call();
 };
 var post = function(endpoint, callback) {
-    var xmlHttp = null;
+   var url = endpoint;
+   var xhr = new XMLHttpRequest();
+   xhr.open("POST", url, true);
 
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", endpoint, false);
-    xmlHttp.send(null);
-    return xmlHttp.responseText;
+//Send the proper header information along with the request
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xhr.send(null);
     callback.call();
 };
 var deleterequest = function(endpoint, callback) {
