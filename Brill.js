@@ -283,13 +283,11 @@ var deleterequest = function(endpoint, callback) {
     callback.call();
 };
 var put = function(endpoint, callback) {
-    var xmlHttp = null;
-
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("PUT", endpoint, false);
-    xmlHttp.send(null);
-    return xmlHttp.responseText;
-    callback.call();
+    var xmlHttp = new XMLHttpRequest();
+    var mimeType = "text/plain";    
+      xmlHttp.open('PUT', url, true);  // true : asynchrone false: synchrone  
+    xmlHttp.setRequestHeader('Content-Type', mimeType);    
+    xmlHttp.send(null); 
 };
 var Model = function(validations) {
     this.validatePresencceOf = function(validated) {
