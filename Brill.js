@@ -285,7 +285,7 @@ var deleterequest = function(endpoint, callback) {
 var put = function(endpoint, callback) {
     var xmlHttp = new XMLHttpRequest();
     var mimeType = "text/plain";    
-      xmlHttp.open('PUT', url, true);  // true : asynchrone false: synchrone  
+      xmlHttp.open('PUT', endpoint, true);  // true : asynchrone false: synchrone  
     xmlHttp.setRequestHeader('Content-Type', mimeType);    
     xmlHttp.send(null); 
 };
