@@ -279,7 +279,6 @@ var deleterequest = function(endpoint, callback) {
 
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("DELETE", endpoint, false);
-    xmlHttp.send(null);
     return xmlHttp.responseText;
     callback.call();
 };
