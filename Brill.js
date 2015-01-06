@@ -269,7 +269,7 @@ var post = function(endpoint, callback) {
    xhr.open("POST", url, true);
 
 //Send the proper header information along with the request
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
 
     xhr.send(null);
     callback.call();
@@ -284,9 +284,9 @@ var deleterequest = function(endpoint, callback) {
 };
 var put = function(endpoint, callback) {
     var xmlHttp = new XMLHttpRequest();
-    var mimeType = "text/plain";    
+       
       xmlHttp.open('PUT', endpoint, true);  // true : asynchrone false: synchrone  
-    xmlHttp.setRequestHeader('Content-Type', mimeType);    
+       
     xmlHttp.send(null); 
 };
 var Model = function(validations) {
