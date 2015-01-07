@@ -271,7 +271,7 @@ var post = function(endpoint, callback) {
 //Send the proper header information along with the request
     
 
-    xhr.send(null);
+    
     callback.call();
 };
 var deleterequest = function(endpoint, callback) {
@@ -287,7 +287,7 @@ var put = function(endpoint, callback) {
        
       xmlHttp.open('PUT', endpoint, true);  // true : asynchrone false: synchrone  
        
-    xmlHttp.send(null); 
+    
 };
 var Model = function(validations) {
     this.validatePresencceOf = function(validated) {
