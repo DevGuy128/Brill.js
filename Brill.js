@@ -10,6 +10,6 @@ window.$ = function(selector){
   return doc.querySelectorAll(selector);
 };
 
-window.hide = function(selector){
-  doc.querySelectorAll(selector)[0].style.visibility = "hidden";
+window.click = function(selector,callback){
+  selector.addEventListener('click', selector);
 };
