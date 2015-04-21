@@ -12,4 +12,4 @@ window.$ = function(selector){
 
 window.hide = function(selector){
   doc.querySelectorAll(selector)[0].style.visibility = "hidden";
-}
+};
