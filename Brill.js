@@ -1,15 +1,18 @@
 var doc = window.document;
-window.append = function(tag,content,appendee){
+window.queryObject.prototype.append = function(){
     var el = document.createElement(tag);
     var node = document.createTextNode(content);
     el.appendChild(node);
     var appended = doc.querySelectorAll(appendee);
     appended[0].appendChild(el);
 };
+window.queryObject = function(selector){
+    this.contents = doc.querySelectorAll(selector);
+};
 window.$ = function(selector){
-  return doc.querySelectorAll(selector);
+  return new queryObject(selector);
 };
 
-window.click = function(selector,callback){
+window.queryObject.prototype.click = function(selector,callback){
   selector.addEventListener('click', selector);
 };
