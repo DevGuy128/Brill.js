@@ -1,18 +1,26 @@
 var doc = window.document;
-window.queryObject.prototype.append = function(){
+window.$ = (function(){
+  function queryObject(){
+    this.contents = doc.querySelectorAll(selector);
+    this.length = contents.length;
+  }
+  queryObject.prototype.text = function(){
+    
+  };
+  queryObject.prototype.append = function(){
     var el = document.createElement(tag);
     var node = document.createTextNode(content);
     el.appendChild(node);
     var appended = doc.querySelectorAll(appendee);
     appended[0].appendChild(el);
-};
-window.queryObject = function(selector){
-    this.contents = doc.querySelectorAll(selector);
-};
-window.$ = function(selector){
-  return new queryObject(selector);
-};
-
-window.queryObject.prototype.click = function(selector,callback){
-  selector.addEventListener('click', selector);
-};
+  };
+  queryObject.prototype.click = function(callback){
+    this.addEventListener('click', callback);
+  };
+  var $ = function(selector){
+    return new queryObject(selector);
+  };
+  return (function(){
+    
+  });
+});
